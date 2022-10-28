@@ -9,6 +9,7 @@ html{
     scroll-behavior: smooth;
 }
 
+
 /* navbar */
 .bigNav{
     position: fixed;
@@ -58,18 +59,94 @@ html{
     transition: 0.6s;
 }
 
+/* mobilenav */
+.mobile{
+    display: none;
+}
+
+.mobileNav{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    width: 100%;
+    height: 100px;
+    z-index: 1;
+}
+
+.mobileNavLogo{
+    flex-basis: 50%;
+    text-align: start;
+    padding-left: 50px;
+}
+
+.mobileNavLogo h2{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: rgb(179, 255, 0);
+    cursor: pointer;
+}
+
+.mobileNavLogo h2 span{
+    color: white;
+}
+
+.humburger{
+    flex-basis: 50%;
+    text-align: end;
+    padding-right: 50px;
+}
+
+.humburger i{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: greenyellow;
+}
+
+.mobileNavBar{
+    background: linear-gradient(to bottom right, rgb(9, 179, 221), rgb(30, 99, 163));
+    position: fixed;
+    right: -770px;
+    padding-top: 100px;
+    width: 100%;
+    height: 100%;
+    transition: 0.8s;
+}
+
+.mobileNavBar ul li{
+    list-style: none;
+    display: block;
+    padding: 50px;
+}
+
+.mobileNavBar ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.mobileNavBar ul li a:hover{
+    color: lime;
+    transition: 0.6s;
+}
+
+
 /* banner */
 body{
     background: linear-gradient(to bottom right, rgb(9, 179, 221), rgb(30, 99, 163));
-    height: 100vh;
+    width: 100%;
     z-index: -2;
     background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 #banner{
     display: flex;
     align-items: center;
-    padding: 100px 200px;
+    padding: 150px 200px;
 }
 
 .bannerText{
@@ -139,7 +216,7 @@ body{
 
 /* footer */
 #footer{
-    margin: 0 200px;
+    padding: 0 200px 50px;
     text-align: center;
 }
 
@@ -153,4 +230,146 @@ body{
 .bx:hover{
     color: lime;
     transition: 1s;
+}
+
+/* monitors */
+@media screen and (min-width: 1161px) and (max-width: 1461px){
+
+    /* banner */
+    #banner{
+        padding: 150px 100px;
+    }
+
+    .bannerImg img{
+        width: 500px;
+    }
+
+    /* footer */
+    #footer{
+        padding: 0 100px 50px;
+    }
+
+}
+
+/* laptops */
+@media screen and (min-width: 769px) and (max-width: 1160px){
+
+
+    /* navbar */
+    .bigNavLogo h2{
+        font-size: 1.5rem;
+    }
+
+    .bigNavBar ul li{
+        padding-right: 30px;
+    }
+
+    .bigNavBar ul li a{
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    /* banner */
+    #banner{
+        padding: 120px 50px;
+    }
+
+    .bannerImg img{
+        width: 350px;
+    }
+
+    .bannerText h1{
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+
+    .bannerText h3{
+        font-size: 0.8rem;
+        font-weight: 400;
+    }
+
+    .bannerText p{
+        font-size: 0.8rem;
+        font-weight: 500;
+        max-width: 700px;
+    }
+
+    .btn button{
+        margin: 10px 0;
+        padding: 5px 10px;
+        font-size: 0.7rem;
+        font-weight: 400;
+    }
+
+    /* footer */
+    #footer{
+        padding: 0 50px 50px;
+    }
+
+    .bx{
+        font-size: 1.5rem;
+        padding: 0 50px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    
+    .bigNav{
+        display: none;
+    }
+
+    /* mobileNav */
+    .mobile{
+        display: block;
+    }
+
+    /* banner */
+    #banner{
+        padding: 150px 30px 100px;
+        display: block;
+    }
+
+    .bannerImg{
+        text-align: center;
+        padding: 50px 0;
+    }
+
+    .bannerImg img{
+        width: 250px;
+    }
+
+    .bannerText h1{
+        font-size: 2.2rem;
+        font-weight: 700;
+    }
+
+    .bannerText h3{
+        font-size: 0.7rem;
+        font-weight: 500;
+    }
+
+    .bannerText p{
+        font-size: 0.8rem;
+        font-weight: 500;
+        max-width: 700px;
+    }
+
+    .btn button{
+        margin: 10px 0;
+        padding: 5px 10px;
+        font-size: 0.7rem;
+        font-weight: 400;
+    }
+
+    /* footer */
+    #footer{
+        padding: 0 30px 50px;
+    }
+
+    .bx{
+        font-size: 1rem;
+        padding: 0 20px;
+    }
+
 }
